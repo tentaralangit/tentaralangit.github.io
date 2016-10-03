@@ -1,1 +1,127 @@
-heii
+<html>
+<head>
+<title>Tentaralangit.org / Commercial Services</title>
+<meta content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no' name='viewport'/>
+<link href='fav.png' rel='icon'/>
+</head>
+<style>
+
+*{
+  padding:0;
+  margin:0;
+  border:0;
+  outline:0;
+  cursor:default;
+  box-sizing:border-box;
+}
+
+html{
+  background:#000;
+  color:#aaa;
+  font:500 16px 'Helvetica Neue','Helvetica','Liberation Sans',arial;
+}
+
+header{
+  margin-top:30px;
+  height:250px;
+  background-image:url(logo.png);
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:;
+}
+
+main{
+  text-align:center;
+}
+h2{
+  line-height:40px;
+}
+
+.Services > div{
+  display:inline-block;
+  width:300px;
+  vertical-align:top;
+  padding:40px 10px 0 10px;
+  background-image:url(ic.png);
+  background-repeat:no-repeat;
+}
+.Attack{background-position:130px -50px;}
+.Surveillance{background-position:130px -282px;}
+.Analytics{background-position:130px -513px;}
+
+.More{
+  margin-top:40px;
+}
+
+.Details{
+  display:inline-block;
+  padding:4px 8px;
+  border-radius:1px;
+  background:green;
+  color:#fff;
+}
+
+
+footer{
+  padding:50px 0;
+  text-align:center;
+  white-space:pre-wrap;
+}
+</style>
+<body>
+
+<header></header>
+
+<main>
+  <div class='Services'>
+    <div class='Attack'><h2>Attack</h2><span>We organize digital based attack to every single Internet Connected devices, againts public and up there.</span></div>
+    <div class='Surveillance'><h2>Surveillance</h2><span>We can help you in a passive/active mode surveillance againts personal/community.</span></div>
+    <div class='Analytics'><h2>Analytics</h2><span>We collecting massive data, through media into inaccessible DarkNet, <br/>Perfectly to answer every question.</span></div>
+  </div>
+  <div class='More'>
+    <div class='Details'>For more details, please contact us or refer to our Agents</div>
+  </div>
+</main>
+
+<footer>
+  <span><i>&copy; 2016 Tentaralangit.org  &mdash;  Earth <i id='Loc'></i></i></span>
+</footer>
+
+
+</body>
+<script>
+var loc=[
+  '..',
+  '48.864,2.349', // paris
+  'locating..', // loc..
+  '-7.79,110.37', // jog
+  '-3.700,128.167', // amq
+  '-3.07,37.35', // kili
+  '-4.07,137.158', // jaya
+  '35.65,139.83', // jap
+  '37.819,-122.47', // golgate
+  '29.979,31.13', // giza
+  '31.78,35.217', // jerus
+]
+var randomFunc;
+var randomLoc;
+randomFunc=function(){
+  var random1=Math.floor((Math.random()*10)+1);
+  var random2=Math.floor((Math.random()*10)+1);
+  clearTimeout(randomLoc);
+  randomLoc=setTimeout(function(){
+    document.getElementById('Loc').innerHTML= loc[random1];
+    randomFunc();
+  },random2*1000);
+};
+randomFunc();
+
+</script>
+</html>
+
+
+
+
+
+
+
